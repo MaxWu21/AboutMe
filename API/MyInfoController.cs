@@ -9,7 +9,7 @@ namespace AboutMe.API
         [HttpGet]
         public ActionResult<string> GetInfo()
         {
-            return "Hello! This is information about me.";
+            return new JsonResult(new { message = "Hello! This is information about me." });
         }
     }
 }

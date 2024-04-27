@@ -5,6 +5,6 @@ namespace AboutMe.Infrastructure.Repositories
 {
     public interface IMyInfoRepository
     {
-        Task<MyInfo> GetMyInfoAsync();
+        Task<string> GetMyInfoAsync();
     }
 }

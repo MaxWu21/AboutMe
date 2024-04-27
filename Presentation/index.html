@@ -8,18 +8,6 @@
     <h1>About Me</h1>
     <p id="info-container"></p>
 
-    <script>
-        fetch('http://localhost:5273/api/MyInfo')
-            .then(response => response.json())
-            .then(data => {
-                const myInfo = data;
-                console.log(myInfo);
-                const infoContainer = document.getElementById('info-container');
-                infoContainer.innerHTML = myInfo;
-            })
-            .catch(error => {
-                console.error('Error fetching data: ', error);
-            });
-    </script>
+    <script src="AboutMeAPIClient.js"></script>
 </body>
 </html>

@@ -1,15 +1,11 @@
-const apiUrl = 'http://localhost:5273/api/MyInfo';
-
-fetch(apiUrl)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
+fetch('http://localhost:5273/api/MyInfo')
+    .then(response => response.json())
     .then(data => {
-        console.log(data);
+        const myInfo = data.message;
+        console.log(myInfo);
+        const infoContainer = document.getElementById('info-container');
+        infoContainer.innerHTML = myInfo;
     })
     .catch(error => {
-        console.error('Error:', error);
+        console.error('Error fetching data: ', error);
     });
